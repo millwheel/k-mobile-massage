@@ -24,3 +24,41 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.btn-call{
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #16a34a 0%, #15803d 100%); /* green-600 -> green-700 */
+}
+
+/* shimmer 라인 (처음엔 왼쪽 바깥) */
+.btn-call::after{
+  content: "";
+  position: absolute;
+  top: 0; left: -40%;
+  height: 100%;
+  width: 35%;
+  pointer-events: none;
+  background: linear-gradient(
+          90deg,
+          rgba(255,255,255,0) 0%,
+          rgba(255,255,255,0.65) 45%,
+          rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-20deg) translateX(0);
+  transition: transform 650ms ease;
+  filter: blur(2px);
+}
+
+/* 호버 시 한 번만 슥 */
+.btn-call:hover::after{
+  transform: skewX(-20deg) translateX(400%);
+}
+
+/* 접근성: 모션 줄이기 선호 시 애니메이션 제거 */
+@media (prefers-reduced-motion: reduce){
+  .btn-call,
+  .btn-call::after{
+    transition: none !important;
+  }
+}
