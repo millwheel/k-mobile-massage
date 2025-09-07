@@ -22,7 +22,7 @@ export default function Home() {
           <div className="relative z-10 max-w-4xl px-6 text-center flex flex-col items-center space-y-16 mt-15">
             {/* 메인 타이틀 */}
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight py-5">
-              썸출장마사지 <span className="text-pink-400">SSUM</span>
+              K Mobile Massage
             </h1>
 
             {/* 어트랙션 */}
@@ -31,11 +31,12 @@ export default function Home() {
                 {/* 거리 문구 */}
                 <div className="flex flex-col space-y-3">
                   <p className="text-2xl sm:text-4xl font-bold text-white">
-                    서울 · 경기 · 인천{" "}
-                    <span className="text-cyan-300">30분 내 도착</span>
+                    Service Area: Seoul · Gyeonggi · Incheon
+                    <br />
+                    <span className="text-cyan-300">Arrival within 30 minutes</span>
                   </p>
                   <p className="text-base sm:text-lg text-gray-400">
-                    * 경기 외곽지역 및 피크시간에는 조금 더 시간이 소요될 수 있습니다.
+                    * Please allow for possible delays during peak hours or to outer Gyeonggi regions.
                   </p>
                 </div>
               </FadeUpWrapper>
@@ -43,7 +44,9 @@ export default function Home() {
                 {/* 24시간 운영 문구 */}
                 <div>
                   <p className="text-2xl sm:text-4xl font-bold text-white">
-                    365일 <span className="text-cyan-300">24시간 운영!</span> 언제든 예약가능
+                    Available 24/7, 365 Days a Year
+                    <br/>
+                    <span className="text-cyan-300"> Book anytime, day or night. </span>
                   </p>
                 </div>
               </FadeUpWrapper>
@@ -51,10 +54,19 @@ export default function Home() {
                 {/* 결제 수단 문구 */}
                 <div className="flex flex-col space-y-2">
                   <p className="text-2xl sm:text-4xl font-bold text-white">
-                    현금 · 계좌이체 · 카드결제 가능
+                    Easy & Transparent Payment
+                  </p>
+                  <p className="text-lg sm:text-xl text-white">
+                    Cash, bank transfer, or card accepted (card payments subject to 10% VAT)
                   </p>
                   <p className="text-base sm:text-lg text-gray-400">
-                    * 카드결제는 부가세 10% 발생합니다
+                    * No advance payment required
+                  </p>
+                  <p className="text-base sm:text-lg text-gray-400">
+                    * No travel fees or hidden charges
+                  </p>
+                  <p className="text-base sm:text-lg text-gray-400">
+                    * Pay after the therapist arrives
                   </p>
                 </div>
               </FadeUpWrapper>
@@ -63,8 +75,8 @@ export default function Home() {
             {/* 인트로 이미지 */}
             <div className="flex justify-center">
               <Image
-                  src="/image/썸출장마사지_안내.png"
-                  alt="썸출장마사지_안내"
+                  src="/image/notice.jpg"
+                  alt="K mobile massage notice"
                   width={600}
                   height={400}
                   className="rounded-2xl shadow-lg shadow-black/40"
@@ -216,7 +228,7 @@ export default function Home() {
 
                       {/* 안내 문구 */}
                       <p className="mt-3 text-xs sm:text-sm text-gray-400">
-                        * 표시된 금액은 1인 기준입니다.
+                        * The amount shown is based on one person
                       </p>
                     </div>
                   </div>
@@ -287,13 +299,20 @@ export default function Home() {
             <div className="rounded-2xl bg-white/[0.04] p-6 ring-1 ring-white/10 text-sm sm:text-base md:text-lg">
               <div className="flex items-start gap-3">
                 <ShieldIcon className="mt-1 !h-6 !w-6 shrink-0 text-cyan-300" />
-                <p className="text-gray-200 leading-relaxed">
-                  썸출장안마 &amp; 썸출장마사지는 문의/예약 전화를 이용하신 고객님의 DB를
-                  <span className="font-semibold text-white"> 철저히 보호</span>합니다. 어떠한 광고 문자·전화를
-                  보내지 않으며, 고객님께서 먼저 연락 주시기 전까지
-                  <span className="font-semibold text-white"> 절대</span> 먼저 연락드리는 일은 없습니다.
-                  사칭 업체에 유의해 주세요.
-                </p>
+                <div className="space-y-2 text-gray-200">
+                  <p className="font-semibold text-cyan-300">Your personal information is strictly protected. </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>
+                      No advertising calls or texts
+                    </li>
+                    <li>
+                      We never contact you first unless you reach out to us
+                    </li>
+                    <li>
+                      Beware of impersonators claiming to be us
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -303,39 +322,31 @@ export default function Home() {
                 <AlertIcon className="mt-1 !h-5 !w-5 shrink-0 text-red-400" />
                 <div className="space-y-2 text-gray-200">
                   <p className="font-semibold text-red-300">
-                    아래 사항을 꼭 확인하세요
+                    Important Notice
+                  </p>
+                  <p>
+                    Be cautious of operators who:
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>
-                      <span className="font-semibold text-white">예약금/보증금 요구</span> 시, 사기업체일 가능성이 높습니다.
-                      썸출장안마 &amp; 썸출장마사지는 <span className="text-yellow-300 font-semibold">관리사 도착 후 결제(후불제)</span>입니다.
+                      Demand deposits or reservation fees
                     </li>
                     <li>
-                      관리사 이미지를 제공한다며 <span className="font-semibold text-white">무단 도용 사진</span>을 사용하는 곳에 유의하세요.
+                      Use stolen therapist images for promotion
                     </li>
                   </ul>
+                  <p>
+                    At K Mobile Massage, <span className="text-yellow-300 font-semibold"> your payment is made only upon arrival,</span>
+                    and all therapists are verified professionals.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 약속 이미지 */}
-        <section className="mx-auto max-w-3xl px-6 py-8">
-          <div className="flex justify-center">
-            <Image
-                src="/image/썸출장마사지_약속.png"
-                alt="썸출장마사지_약속"
-                width={600}
-                height={400}
-                className="object-cover rounded-lg"
-                priority
-            />
-          </div>
-        </section>
-
         <footer className="mx-auto max-w-6xl px-6 py-12 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} 썸출장안마 &amp; 썸출장마사지. All rights reserved.
+          © {new Date().getFullYear()} K mobile massage. All rights reserved.
         </footer>
 
       </div>
