@@ -138,8 +138,8 @@ export default function Home() {
           {/* 이미지 */}
           <div className="flex justify-center">
             <Image
-                src="/image/썸출장마사지_차별화.png"
-                alt="썸출장마사지_차별화"
+                src="/image/therapist1.jpg"
+                alt="therapist1"
                 width={600}
                 height={400}
                 className="object-cover rounded-lg"
