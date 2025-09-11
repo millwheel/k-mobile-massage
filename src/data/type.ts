@@ -9,15 +9,9 @@ export type Course = {
     badge?: string
 };
 
-export type WhatsappQR = {
-    storagePath: string;
-    downloadURL: string;
-    updatedAt: string;
-}
-
 export type WhatsappSettings = {
-    qr1: WhatsappQR | null;
-    qr2: WhatsappQR | null;
+    qrUrl1: string | null;
+    qrUrl2: string | null;
 }
 
 export type QrSlot = "qr1" | "qr2";

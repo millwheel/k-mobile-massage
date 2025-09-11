@@ -24,12 +24,12 @@ const WHATSAPP_DOC_REF = doc(db, "settings", "whatsapp");
 export async function getWhatsappSetting(): Promise<WhatsappSettings> {
     const snap = await getDoc(WHATSAPP_DOC_REF);
     if (!snap.exists()) {
-        return { qr1: null, qr2: null };
+        return { qrUrl1: null, qrUrl2: null };
     }
     const data = snap.data() as WhatsappSettings;
     return {
-        qr1: data.qr1 ?? null,
-        qr2: data.qr2 ?? null,
+        qrUrl1: data.qrUrl1 ?? null,
+        qrUrl2: data.qrUrl2 ?? null,
     };
 }
 
@@ -38,8 +38,8 @@ export async function saveWhatsappSetting(settings: WhatsappSettings): Promise<v
     await setDoc(
         WHATSAPP_DOC_REF,
         {
-            ...(settings.qr1 !== undefined ? { call1: settings.qr1 } : {}),
-            ...(settings.qr2 !== undefined ? { call2: settings.qr2 } : {}),
+            ...(settings.qrUrl1 !== undefined ? { qr1: settings.qrUrl1 } : {}),
+            ...(settings.qrUrl2 !== undefined ? { qr2: settings.qrUrl2 } : {}),
         },
         { merge: true }
     );
