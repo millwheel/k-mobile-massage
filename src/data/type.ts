@@ -13,5 +13,3 @@ export type WhatsappSettings = {
     qrUrl1: string | null;
     qrUrl2: string | null;
 }
-
-export type QrSlot = "qr1" | "qr2";
