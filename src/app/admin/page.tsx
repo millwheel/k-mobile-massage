@@ -196,35 +196,38 @@ export default function AdminPage() {
                 이미지는 <span className="font-mono">저장</span>을 눌러야 업로드됩니다. 선택만 하면 미리보기가 표시됩니다.
             </p>
 
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <SlotCard
-                    title="QR #1"
-                    slotState={qr1}
-                    onFileChange={(file) => onFileChange("qr1", file)}
-                    onClear={() => onClearSlot("qr1")}
-                />
-                <SlotCard
-                    title="QR #2"
-                    slotState={qr2}
-                    onFileChange={(file) => onFileChange("qr2", file)}
-                    onClear={() => onClearSlot("qr2")}
-                />
-            </div>
-
-            <div className="mt-8 flex items-center gap-3">
-                <button
-                    disabled={!hasChanges || saving}
-                    onClick={handleSave}
-                    className={`inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold
+            <div className="my-5 p-5 bg-gray-700 rounded-2xl">
+                <div className="mt-8 flex justify-end items-end gap-3">
+                    <button
+                        disabled={!hasChanges || saving}
+                        onClick={handleSave}
+                        className={`inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold
             border transition-all
             ${hasChanges && !saving
-                        ? "bg-cyan-600 text-white border-cyan-500 hover:bg-cyan-500"
-                        : "bg-gray-800 text-gray-400 border-gray-700 cursor-not-allowed"}`}
-                >
-                    {saving ? "저장 중…" : "저장"}
-                </button>
-                <HomeLinkButton />
+                            ? "bg-cyan-600 text-white border-cyan-500 hover:bg-cyan-500"
+                            : "bg-gray-800 text-gray-400 border-gray-700 cursor-not-allowed"}`}
+                    >
+                        {saving ? "저장 중…" : "저장"}
+                    </button>
+                </div>
+
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <SlotCard
+                        title="QR #1"
+                        slotState={qr1}
+                        onFileChange={(file) => onFileChange("qr1", file)}
+                        onClear={() => onClearSlot("qr1")}
+                    />
+                    <SlotCard
+                        title="QR #2"
+                        slotState={qr2}
+                        onFileChange={(file) => onFileChange("qr2", file)}
+                        onClear={() => onClearSlot("qr2")}
+                    />
+                </div>
             </div>
+
+            <HomeLinkButton />
         </div>
     );
 }
