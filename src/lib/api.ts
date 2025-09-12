@@ -38,8 +38,8 @@ export async function saveWhatsappSetting(settings: WhatsappSettings): Promise<v
     await setDoc(
         WHATSAPP_DOC_REF,
         {
-            ...(settings.qrUrl1 !== undefined ? { qr1: settings.qrUrl1 } : {}),
-            ...(settings.qrUrl2 !== undefined ? { qr2: settings.qrUrl2 } : {}),
+            ...(settings.qrUrl1 !== undefined ? { qrUrl1: settings.qrUrl1 } : {}),
+            ...(settings.qrUrl2 !== undefined ? { qrUrl2: settings.qrUrl2 } : {}),
         },
         { merge: true }
     );
