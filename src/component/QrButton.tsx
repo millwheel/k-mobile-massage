@@ -43,14 +43,14 @@ export default function QrButtons() {
                     disabled={disabled1 || loading}
                     aria-label="WhatsApp QR 1 보기"
                     className={`inline-flex items-center gap-2 rounded-2xl px-10 py-6 font-semibold text-white shadow-lg shadow-black/20 ring-1 ring-white/10 transition-transform duration-200
-            ${disabled1 || loading
+                    ${disabled1 || loading
                         ? "bg-gray-800 text-gray-400 cursor-not-allowed"
                         : "cursor-pointer hover:scale-[1.02] bg-cyan-700 hover:bg-cyan-600"}`}
                 >
                     <ImageIcon className="h-5 w-5 opacity-90" />
                     <span className="text-base sm:text-lg tracking-tight">
-            {loading ? "불러오는 중…" : disabled1 ? "QR 1 (등록 필요)" : "QR 1"}
-          </span>
+                        {loading ? "불러오는 중…" : disabled1 ? "QR 1 (등록 필요)" : "Whatsapp 1"}
+                    </span>
                 </button>
 
                 {/* QR #2 버튼 */}
@@ -59,14 +59,14 @@ export default function QrButtons() {
                     disabled={disabled2 || loading}
                     aria-label="WhatsApp QR 2 보기"
                     className={`inline-flex items-center gap-2 rounded-2xl px-10 py-6 font-semibold text-white shadow-lg shadow-black/20 ring-1 ring-white/10 transition-transform duration-200
-            ${disabled2 || loading
+                    ${disabled2 || loading
                         ? "bg-gray-800 text-gray-400 cursor-not-allowed"
                         : "cursor-pointer hover:scale-[1.02] bg-cyan-700 hover:bg-cyan-600"}`}
                 >
                     <ImageIcon className="h-5 w-5 opacity-90" />
                     <span className="text-base sm:text-lg tracking-tight">
-            {loading ? "불러오는 중…" : disabled2 ? "QR 2 (등록 필요)" : "QR 2"}
-          </span>
+                        {loading ? "불러오는 중…" : disabled2 ? "QR 2 (등록 필요)" : "Whatsapp 2"}
+                    </span>
                 </button>
             </div>
 

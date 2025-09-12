@@ -52,13 +52,13 @@ export default function QrModal({ open, onClose, imageUrl, alt = "QR code" }: Qr
                     ref={closeBtnRef}
                     onClick={onClose}
                     aria-label="닫기"
-                    className="absolute right-2 top-2 z-10 rounded-lg p-2 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                    className="absolute right-2 top-2 z-10 rounded-lg p-2 hover:bg-white/10 focus:outline-none"
                 >
                     <X className="h-5 w-5 text-white" />
                 </button>
 
                 {/* QR 이미지 (정중앙, 여백 없이 꽉 차게 노출) */}
-                <div className="p-4">
+                <div className="p-12">
                     <div className="w-full aspect-square overflow-hidden rounded-xl bg-black/30">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
