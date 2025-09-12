@@ -49,7 +49,7 @@ export default function QrButtons() {
                 >
                     <ImageIcon className="h-5 w-5 opacity-90" />
                     <span className="text-base sm:text-lg tracking-tight">
-                        {loading ? "불러오는 중…" : disabled1 ? "QR 1 (등록 필요)" : "Whatsapp 1"}
+                        {loading ? "불러오는 중…" : disabled1 ? "QR 1 (Empty)" : "Whatsapp 1"}
                     </span>
                 </button>
 
@@ -65,7 +65,7 @@ export default function QrButtons() {
                 >
                     <ImageIcon className="h-5 w-5 opacity-90" />
                     <span className="text-base sm:text-lg tracking-tight">
-                        {loading ? "불러오는 중…" : disabled2 ? "QR 2 (등록 필요)" : "Whatsapp 2"}
+                        {loading ? "불러오는 중…" : disabled2 ? "QR 2 (Empty)" : "Whatsapp 2"}
                     </span>
                 </button>
             </div>
