@@ -1,7 +1,7 @@
 import {auth, db, storage} from "@/lib/firebase";
 import {onAuthStateChanged, signInWithEmailAndPassword, signOut, User} from "firebase/auth";
 import {doc, getDoc, setDoc} from "firebase/firestore";
-import { WhatsappSettings} from "@/data/type";
+import {PhoneSettings, WhatsappSettings} from "@/data/type";
 import {deleteObject, getDownloadURL, ref, uploadBytes} from "@firebase/storage";
 import {FirebaseError} from "@firebase/app";
 
@@ -19,6 +19,30 @@ export async function logout() {
 }
 
 const WHATSAPP_DOC_REF = doc(db, "settings", "whatsapp");
+const PHONE_EN_DOC_REF = doc(db, "settings", "phone_en");
+
+// READ PHONE
+export async function getPhoneSettings(): Promise<PhoneSettings> {
+    const snap = await getDoc(PHONE_EN_DOC_REF);
+    if (!snap.exists()) {
+        return { call1: null };
+    }
+    const data = snap.data() as PhoneSettings;
+    return {
+        call1: data.call1 ?? null,
+    };
+}
+
+// UPSERT PHONE
+export async function savePhoneSettings(settings: PhoneSettings): Promise<void> {
+    await setDoc(
+        PHONE_EN_DOC_REF,
+        {
+            ...(settings.call1 !== undefined ? { call1: settings.call1 } : {}),
+        },
+        { merge: true }
+    );
+}
 
 // READ
 export async function getWhatsappSetting(): Promise<WhatsappSettings> {

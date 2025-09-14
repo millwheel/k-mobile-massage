@@ -9,6 +9,10 @@ export type Course = {
     badge?: string
 };
 
+export interface PhoneSettings {
+    call1: string | null;
+}
+
 export type WhatsappSettings = {
     qrUrl1: string | null;
     qrUrl2: string | null;
