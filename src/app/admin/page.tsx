@@ -114,12 +114,9 @@ export default function AdminPage() {
     const handleSave = async () => {
         setSaving(true);
         try {
-            // Start with current values
             let nextQrUrl1: string | null = qr1.currentUrl;
             let nextQrUrl2: string | null = qr2.currentUrl;
 
-            // For each slot: if markedDelete -> delete storage (if exists) and set null
-            // If file selected -> replace: delete old (if exists), upload new and set url
             // Note: deleteWhatsappQr ignores "not-found" error.
             // Slot qr1
             if (qr1.markedDelete && qr1.currentUrl) {
@@ -191,7 +188,10 @@ export default function AdminPage() {
     return (
         <div className="max-w-3xl mx-auto px-4 py-8">
             <Toaster position="top-center" />
-            <h1 className="text-2xl md:text-3xl font-bold tracking-tight">WhatsApp QR 관리</h1>
+            <h1 className="text-2xl md:text-3xl font-bold tracking-tight">연락처 관리</h1>
+            <p className="text-sm text-gray-500">
+                전화번호에는 반드시 하이픈(-)을 포함해주세요
+            </p>
             <p className="text-gray-400 mt-2">
                 이미지는 <span className="font-mono">저장</span>을 눌러야 업로드됩니다. 선택만 하면 미리보기가 표시됩니다.
             </p>
@@ -201,9 +201,8 @@ export default function AdminPage() {
                     <button
                         disabled={!hasChanges || saving}
                         onClick={handleSave}
-                        className={`inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold
-            border transition-all
-            ${hasChanges && !saving
+                        className={`inline-flex items-center justify-center rounded-xl px-6 py-3 font-semibold border transition-all
+                            ${hasChanges && !saving
                             ? "bg-cyan-600 text-white border-cyan-500 hover:bg-cyan-500"
                             : "bg-gray-800 text-gray-400 border-gray-700 cursor-not-allowed"}`}
                     >
