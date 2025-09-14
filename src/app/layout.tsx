@@ -19,6 +19,18 @@ export const metadata: Metadata = {
         index: true,
         follow: true,
     },
+    openGraph: {
+        type: "website",
+        url: "https://k-mobile-massage.com/",
+        title: "K Mobile Massage | Seoul Massage",
+        description:
+            "mobile massage, seoul Massage, outcall massage, korea mobile massage",
+        siteName: "K Mobile Massage",
+        images: [
+            { url: "/image/og.png", width: 700, height: 800, alt: "K Mobile Massage" },
+        ],
+        locale: "ko_KR",
+    },
 };
 
 export default function RootLayout({
