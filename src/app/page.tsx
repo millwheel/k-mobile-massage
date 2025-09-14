@@ -3,7 +3,7 @@ import Image from "next/image";
 import {ShieldIcon} from "@/component/shieldIcon";
 import {AlertIcon} from "@/component/alertIcon";
 import {courses} from "@/data/data";
-import QrButtons from "@/component/QrButton";
+import CallButtons from "@/component/CallButton";
 
 export default function Home() {
   return (
@@ -292,7 +292,7 @@ export default function Home() {
             </div>
 
             {/*/!* CTA *!/*/}
-            <QrButtons />
+            <CallButtons />
           </div>
         </section>
 
