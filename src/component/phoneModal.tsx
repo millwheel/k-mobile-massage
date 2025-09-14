@@ -13,7 +13,7 @@ interface PhoneModalProps {
 export default function PhoneModal({
                                        open,
                                        onClose,
-                                       title = "상담 전화 번호",
+                                       title = "phone number",
                                        number
                                    }: PhoneModalProps) {
     const dialogRef = useRef<HTMLDivElement>(null);
@@ -47,7 +47,6 @@ export default function PhoneModal({
             setCopied(true);
             setTimeout(() => setCopied(false), 1500);
         } catch {
-            // 아주 오래된 브라우저 대비
             const temp = document.createElement("input");
             temp.value = number;
             document.body.appendChild(temp);
@@ -88,7 +87,7 @@ export default function PhoneModal({
 
                 {/* 본문 */}
                 <div className="px-6 py-5 space-y-4">
-                    <p className="text-sm text-gray-300">아래 번호로 연락 주세요.</p>
+                    <p className="text-sm text-gray-300">Call this number.</p>
 
                     <div className="flex items-center justify-between rounded-xl bg-white/[0.06] ring-1 ring-white/10 px-4 py-3">
                         <div className="text-xl font-extrabold tracking-wide">{number}</div>
@@ -98,7 +97,7 @@ export default function PhoneModal({
                                 className="inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold bg-white/10 hover:bg-white/20 ring-1 ring-white/10 transition"
                             >
                                 <Copy className="h-4 w-4" />
-                                {copied ? "복사됨!" : "복사"}
+                                {copied ? "Copied!" : "Copy"}
                             </button>
                         </div>
                     </div>
