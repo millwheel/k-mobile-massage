@@ -16,7 +16,7 @@ export function SlotCard({
     return (
         <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
             <div className="flex items-center justify-between">
-                <h2 className="text-lg font-semibold">{title}</h2>
+                <h2 className="text-lg text-white font-semibold">{title}</h2>
                 {slotState.markedDelete && (
                     <span className="text-xs px-2 py-1 rounded bg-rose-500/10 text-rose-300 border border-rose-400/30">
             삭제 예정
@@ -61,7 +61,7 @@ export function SlotCard({
 
                 <div className="ml-auto text-xs text-gray-400">
                     {slotState.previewUrl
-                        ? "미리보기 중 (저장 시 업로드)"
+                        ? "미리보기 중"
                         : slotState.currentUrl
                             ? "저장됨"
                             : "미선택"}
