@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
     title: "K mobile massage",
-    description: "K mobile massage",
+    description: "K mobile massage. 24Hours, 365 Days a Year. Seoul, Korea mobile massage.",
+    keywords: ["mobile massage", "seoul massage", "outcall massage", "korea mobile massage"],
     robots: {
         index: true,
         follow: true,
@@ -22,9 +23,9 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         url: "https://k-mobile-massage.com/",
-        title: "K Mobile Massage | Seoul Massage",
+        title: "K Mobile Massage",
         description:
-            "mobile massage, seoul Massage, outcall massage, korea mobile massage",
+            "mobile massage, seoul massage, outcall massage, korea mobile massage",
         siteName: "K Mobile Massage",
         images: [
             { url: "/image/og.png", width: 700, height: 800, alt: "K Mobile Massage" },
