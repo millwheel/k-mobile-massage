@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         type: "website",
-        url: "https://k-mobile-massage.com/",
+        url: "https://k-mobilemassage.com/",
         title: "K Mobile Massage",
         description:
             "mobile massage, seoul massage, outcall massage, korea mobile massage",
